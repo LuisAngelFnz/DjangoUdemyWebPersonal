@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-ckeditor = "*"
+pillow = "*"
+pylint = "*"
+pylint-django = "*"
+pylint-celery = "*"
+
+[dev-packages]
+pycodestyle = "*"
+
+[requires]
+python_version = "2.7"
+
+[scripts]
+upserver = "python ./manage.py runserver"
