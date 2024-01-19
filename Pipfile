@@ -10,12 +10,13 @@ pillow = "*"
 pylint = "*"
 pylint-django = "*"
 pylint-celery = "*"
+pipfile = "*"
 
 [dev-packages]
 pycodestyle = "*"
 
 [requires]
-python_version = "2.7"
+python_version = "3.12.1"
 
 [scripts]
 upserver = "python ./manage.py runserver"
