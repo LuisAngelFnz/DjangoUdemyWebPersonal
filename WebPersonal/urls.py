@@ -17,13 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf import settings
-from core import views
+from core import views as coreviews
+from portfolio import views as portviews
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('about-me/', views.about, name='about'),
-    path('portfolio/', views.portfolio, name='portfolio'),
-    path('contact/', views.contact, name='contact'),
+    path('', coreviews.home, name='home'),
+    path('about-me/', coreviews.about, name='about'),
+    path('portfolio/', portviews.portfolio, name='portfolio'),
+    path('contact/', coreviews.contact, name='contact'),
     path('admin/', admin.site.urls),
 ]
 
