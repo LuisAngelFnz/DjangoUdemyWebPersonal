@@ -16,9 +16,15 @@
                 <img class="img-fluid" src="{{eproject.image.url}}" alt="">
             </div>
             <div class="col-lg-7 col-md-8">
-                <h2 class="section-heading title">{{eproject.title}}</h2>   
-                <p>{{eproject.description}}</p>
-                {% comment %} <p><a href="http://google.com">Más información</a></p> {% endcomment %}
+                <h2 class="section-heading title">{{eproject.title}}</h2>
+                {% if eproject.description|wordcount > 50 %}
+                    <p>{{eproject.description|truncatewords:50}}</p>
+                {% else %}
+                    <p>{{eproject.description}}</p>
+                {% endif %} 
+                {% if eproject.url %}
+                    <p><a href="{{eproject.url}}">Más información</a></p>
+                {% endif %}
             </div>
         </div>
     {% endfor %}
